@@ -17,17 +17,17 @@ ES3<- Media3/sqrt(50)
 ES4<- Media4/sqrt(50)
 ES5<- Media5/sqrt(50)
 
-# P6.2 Según sus calculos, qué zonas entran en alerta sanitaria?
+# P6.2 SegÃºn sus calculos, quÃ© zonas entran en alerta sanitaria?
 # Entran en alerta sanitaria son la zona Bahia Martin (primera media) y Bahia Chincui (cuarto promedio)
 
-# P6.3 Grafique las medias muéstrales y sus desviaciones estándar. Interprete 
+# P6.3 Grafique las medias muÃ©strales y sus desviaciones estÃ¡ndar. Interprete 
 
 ID<- c("B1", "B2","B3", "B4", "B5")
 Promedio<- c(80.39, 76.48, 78.83, 84.11, 75.49)
-DesviaciónEstandar<-c(5.77, 30.67, 5.61, 4.17, 20.68)
-DesvPromedio<- Promedio-DesviaciónEstandar
-DesvPromedio2<- Promedio+DesviaciónEstandar
-Tabla<- cbind(ID, Promedio, DesviaciónEstandar,DesvPromedio, DesvPromedio2)
+DesviaciÃ³nEstandar<-c(5.77, 30.67, 5.61, 4.17, 20.68)
+DesvPromedio<- Promedio-DesviaciÃ³nEstandar
+DesvPromedio2<- Promedio+DesviaciÃ³nEstandar
+Tabla<- cbind(ID, Promedio, DesviaciÃ³nEstandar,DesvPromedio, DesvPromedio2)
 
 TablaFrame<- as.data.frame(Tabla)
 
@@ -35,6 +35,8 @@ ggplot(data= TablaFrame, aes(x=ID, y=Promedio))+
   geom_bar(stat= "identity", fill= "grey", width= .2)+
   geom_errorbar(aes(ymin=DesvPromedio, ymax=DesvPromedio2), width=.5, colour= "black")+
   ylab("Promedio")+ xlab("Muestras")
+
+## GRAFICO HECHO POR EL PROFE
 
 ID<- c("B1", "B2","B3", "B4", "B5")
 Prom<- c(80.39, 76.48, 78.83, 84.11, 75.49)
